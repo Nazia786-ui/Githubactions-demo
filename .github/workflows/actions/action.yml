@@ -3,7 +3,12 @@ name: hello
 #if something is pushed into the repository, that is the action on which it triggers
 on: push
 
-runs:
-  using: 'node20'
-  main: 'test.js'
+jobs:
+  on-changed:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: testing workflow
+        run: echo "print my name"
+      - name: testing another workflow
+        run: ./.github/workflows@main
     
