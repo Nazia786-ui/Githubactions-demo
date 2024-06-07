@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout the code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v1
       - name: github
         uses: ./.github/workflows/actions/action.yml@v1
   
