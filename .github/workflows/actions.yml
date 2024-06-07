@@ -8,7 +8,7 @@ jobs:
       - name: checkout the code
         uses: actions/checkout@v4
       - name: using another job
-        uses: ./.github/workflows/main.yml@my-job
+        uses: ./.github/workflows/main.yml#my-job
       - name: print my name
         run: echo "my name is Nazia"
   
