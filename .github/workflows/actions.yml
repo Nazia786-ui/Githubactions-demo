@@ -2,8 +2,11 @@ name: demo11
 on: push
 jobs:
   on-push-actions:
+   
     runs-on: ubuntu-latest
     steps:
+      - name: using another job
+        uses: ./main.yml@my-job
       - name: print my name
         run: echo "my name is Nazia"
   
