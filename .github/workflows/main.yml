@@ -1,7 +1,7 @@
 name: hello
 
 #if something is pushed into the repository, that is the action on which it triggers
-'on': push
+'on': pull
 jobs:
   my-job:
     runs-on: ubuntu-latest
