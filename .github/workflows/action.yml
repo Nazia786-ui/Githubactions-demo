@@ -1,8 +1,0 @@
-name: demo11
-on: push
-runs:
-  using: 'node20'
-  main: 'actions/test.js'
-  
-
-  
