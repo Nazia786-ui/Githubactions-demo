@@ -1,15 +1,8 @@
 name: demo11
 on: push
-jobs:
-  on-push-actions:
-   
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout the code
-        uses: actions/checkout@v1
-      - name: github
-        uses: ./.github/workflows/actions@my-job
+runs:
+  using: 'node20'
+  main: 'actions/test.js'
   
-      - name: print my name
-        run: echo "my name is Nazia"
+
   
