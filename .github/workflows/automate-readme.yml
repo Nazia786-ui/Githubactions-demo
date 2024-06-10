@@ -40,6 +40,11 @@ jobs:
       - name: getting sum using inputs
         run: |
          echo "sum is sum: $(( ${{inputs.first_value}} + ${{inputs.second_value}} ))"
+  Adding_secrets:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: using secrets
+        run: echo "my secret key is ${{secrets.my_secret_key}}
       
         
         
