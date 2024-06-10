@@ -1,0 +1,12 @@
+name: Testing Demo
+on: 
+  workflow_dispatch:
+env:
+  Greeting: hello
+jobs:
+  Called_Wf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: testing command
+        run: echo "i am called workflow - I am printing env varaiable value- $Greeting"
