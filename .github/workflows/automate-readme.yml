@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: getting sum using inputs
         run: |
-         echo "sum is sum: ${{${{ inputs.first_value }} + ${{ inputs.second_value }}}}
-         echo "difference  is diff: ${{${{ inputs.first_value} } - ${{ inputs.second_value }}}}
+         echo "sum is sum: ${{ inputs.first_value + inputs.second_value }}"
+      
         
         
