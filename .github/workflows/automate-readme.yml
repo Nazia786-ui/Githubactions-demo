@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 
 # this varIABles can be used in single workflow only  
+# FOR variables to be acess across multiple WF then we create configuration value in settings and use in this format ${{vars.PROJECT_ID}}
 env:
   Greeting: hello
 jobs:
@@ -13,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: testing command
-        run: echo "i am called workflow - I am printing env varaiable value- $Greeting"
+        run: echo "i am called workflow - I am printing env varaiable value- $Greeting and my configuration value is coming from - ${{vars.PROJECT_ID}}"
