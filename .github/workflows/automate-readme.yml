@@ -3,11 +3,23 @@ name: Testing Demo
 #If event is set as Workflow-dispatch then it will trigger manually not automatically 
 on: 
   workflow_dispatch:
+    inputs:
+      first_value:
+        description: giving first value
+        default: '0'
+        required: true
+      second_value:
+        description: giving second  value
+        default: '9'
+        required: true
 
 # this varIABles can be used in single workflow only  
 # FOR variables to be acess across multiple WF then we create configuration value in settings and use in this format ${{vars.PROJECT_ID}}
 env:
   Greeting: hello
+
+
+
 jobs:
   Called_Wf:
     runs-on: ubuntu-latest
@@ -22,3 +34,12 @@ jobs:
       - name: testing context varaibles
         run: |
           echo "repository name : ${{github.repository}}"
+  input-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: getting sum using inputs
+        run: |
+         echo "sum is sum: ${{ ${{inputs.first_value}} + ${{inputs.second_value}} }}
+         echo "difference  is diff: ${{ ${{inputs.first_value}} - ${{inputs.second_value}} }}
+        
+        
