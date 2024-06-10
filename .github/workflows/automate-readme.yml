@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: using secrets
-        run: echo "my secret key is ${{secrets.my_secret_key}}
+        run: echo "my secret key is ${{secrets.MY_SECRET_KEY}}
       
         
         
