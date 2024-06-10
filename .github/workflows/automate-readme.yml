@@ -1,6 +1,10 @@
 name: Testing Demo
+
+#If event is set as Workflow-dispatch then it will trigger manually not automatically 
 on: 
   workflow_dispatch:
+
+# this varIABles can be used in single workflow only  
 env:
   Greeting: hello
 jobs:
