@@ -1,0 +1,15 @@
+name: caller
+on: push
+jobs:
+  caller:
+   runs-on: ubuntu-latest
+   steps:
+    - name: checking out
+      uses: actions/checkout@v3
+    - name: calling called function
+      uses: Nazia786-ui/Githubactions-demo/.github/workflows/calledfile.yml@main
+    - name: caller function
+      run: echo "i am calller function"
+
+        
+    
