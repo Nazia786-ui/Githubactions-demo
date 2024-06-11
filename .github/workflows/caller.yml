@@ -6,9 +6,11 @@ jobs:
    steps:
     - name: checking out
       uses: actions/checkout@v3
-   
     - name: caller function
       run: echo "i am calller function"
+
+  called:
+     uses: Nazia786-ui/Githubactions-demo/.github/workflows/calledfile.yml@main
 
         
     
