@@ -1,0 +1,12 @@
+name: calleryml
+on: 
+  workflow_call:
+jobs:
+  caller_function:  
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: running caller function job
+        run: echo "caller function"
+      
+      
