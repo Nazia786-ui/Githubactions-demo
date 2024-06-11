@@ -1,0 +1,12 @@
+name: calledyml
+on: 
+  workflow_call:
+jobs:
+  called_function:  
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: running called function job
+        run: echo "calledd function"
+      
+      
